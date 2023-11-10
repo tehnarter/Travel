@@ -1,0 +1,18 @@
+body {
+	transition: background-color 1s, color 0.5s;
+	&.dark-mode {
+		background-color: rgba(20, 20, 20, 0.384);
+	}
+}
+.day-night {
+	width: 25px;
+	&:hover {
+		cursor: pointer;
+	}
+}
+.day-mode {
+	transition: transform 0.3s ease;
+}
+.night-mode {
+	transform: rotate(180deg);
+}

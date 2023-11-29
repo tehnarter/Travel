@@ -1,5 +1,7 @@
 .header {
 	background-image: url(/img/Header/header.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
 
 	// .header__nav
 
@@ -56,6 +58,7 @@
 		font-family: 'Lato';
 		font-style: normal;
 		font-weight: 500;
+		@include adaptiveValue('font-size', 50, 30);
 		font-size: 50px;
 		line-height: 60px;
 	}
@@ -78,6 +81,8 @@
 	&__search {
 		padding: 0px 0px 376px 0px;
 		display: flex;
+		flex-direction: column;
+		row-gap: 10px;
 		font-family: 'Lato';
 		font-style: normal;
 		font-weight: 500;
@@ -86,6 +91,9 @@
 		/* identical to box height, or 133% */
 
 		$mainColor: #ffffff;
+		@media (min-width: $mobile) {
+			flex-direction: row;
+		}
 	}
 
 	// .header__what

@@ -1,7 +1,13 @@
 body {
 	transition: background-color 1s, color 0.5s;
 	&.dark-mode {
-		background-color: rgba(20, 20, 20, 0.384);
+		background-color: var(--bg-primary-dark);
+		* {
+			color: var(--primary) !important;
+		}
+		*.benefits__inner {
+			background-color: var(--bg-primary-dark);
+		}
 	}
 }
 .day-night {

@@ -18,25 +18,21 @@
 /* При разрешении экрана 900px и ниже, выводим на экран иконку бургера */
 @media (max-width: em(970)) {
 	.nav {
+		padding: 0;
 		display: none;
-		flex-direction: column;
-		position: fixed;
-		height: 100%;
-		width: 100%;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
+		position: absolute;
+
+		width: 30%;
+		top: 15%;
+		left: 5%;
 		z-index: 50;
-		overflow-y: auto;
-		padding: 50px 40px;
-		background-color: rgb(37, 16, 228);
+
 		color: #fff;
 		animation: burgerAnimation 0.4s;
 
 		&__list {
 			flex-direction: column;
-			row-gap: 30px;
+			row-gap: 10px;
 		}
 	}
 }

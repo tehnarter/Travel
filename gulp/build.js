@@ -56,19 +56,21 @@ const setPanini = {
 	data: 'src/html/data',
 }
 gulp.task('html:build', function () {
-	return gulp
-		.src([
-			'./src/html/**/*.html',
-			'!./src/html/layouts/*.html',
-			'!./src/html/blocks/*.html',
-		])
-		.pipe(changed('./build/'))
-		.pipe(panini(setPanini))
-		.pipe(plumber(plumberNotify('HTML')))
-		.pipe(fileInclude(fileIncludeSetting))
-		.pipe(webpHTML())
-		.pipe(htmlclean())
-		.pipe(gulp.dest('./build/'))
+	return (
+		gulp
+			.src([
+				'./src/html/**/*.html',
+				'!./src/html/layouts/*.html',
+				'!./src/html/blocks/*.html',
+			])
+			.pipe(changed('./build/'))
+			.pipe(panini(setPanini))
+			.pipe(plumber(plumberNotify('HTML')))
+			.pipe(fileInclude(fileIncludeSetting))
+			// .pipe(webpHTML())
+			.pipe(htmlclean())
+			.pipe(gulp.dest('./build/'))
+	)
 })
 
 gulp.task('sass:build', function () {

@@ -1,37 +1,64 @@
-.block-3__animated {
+.img-get-1__animated {
 	opacity: 0; /* Блоки за замовчуванням не видимі */
-	transform: translateY(40px); /* Початкове положення блоків нижче */
+	transform: translateX(-400px); /* Початкове положення блоків нижче */
 	transition: opacity 0.5s ease, transform 5s ease;
+	&.animate {
+		opacity: 1; /* Зробіть блоки видимими при анімації */
+		transform: translateX(0); /* Позиція блоків після анімації */
+	}
+}
+.img-get-2__animated {
+	opacity: 0; /* Блоки за замовчуванням не видимі */
+	transform: translateX(400px); /* Початкове положення блоків нижче */
+	transition: opacity 0.5s ease, transform 5s ease;
+	&.animate {
+		opacity: 1; /* Зробіть блоки видимими при анімації */
+		transform: translateX(0); /* Позиція блоків після анімації */
+	}
+}
+.img-get-3__animated {
+	opacity: 0; /* Блоки за замовчуванням не видимі */
+	transform: translateX(-800px); /* Початкове положення блоків нижче */
+	transition: opacity 0.5s ease, transform 5s ease;
+	&.animate {
+		opacity: 1; /* Зробіть блоки видимими при анімації */
+		transform: translateX(0); /* Позиція блоків після анімації */
+	}
+}
+.img-get-4__animated {
+	opacity: 0; /* Блоки за замовчуванням не видимі */
+	transform: translateY(400px); /* Початкове положення блоків нижче */
+	transition: opacity 10s ease, transform 5s ease;
 	&.animate {
 		opacity: 1; /* Зробіть блоки видимими при анімації */
 		transform: translateY(0); /* Позиція блоків після анімації */
 	}
 }
-.img-block-3__animated {
+.img-get-5__animated {
 	opacity: 0; /* Блоки за замовчуванням не видимі */
-	transform: translateY(-40px); /* Початкове положення блоків нижче */
+	transform: translateX(800px); /* Початкове положення блоків нижче */
 	transition: opacity 0.5s ease, transform 5s ease;
 	&.animate {
 		opacity: 1; /* Зробіть блоки видимими при анімації */
-		transform: translateY(0); /* Позиція блоків після анімації */
+		transform: translateX(0); /* Позиція блоків після анімації */
 	}
 }
 
-.img-block-4__animated {
+.img-card-one__animated {
 	opacity: 0; /* Блоки за замовчуванням не видимі */
-	transform: translatex(400px); /* Початкове положення блоків нижче */
+	transform: translateX(-400px); /* Початкове положення блоків нижче */
 	transition: opacity 0.5s ease, transform 5s ease;
 	&.animate {
 		opacity: 1; /* Зробіть блоки видимими при анімації */
-		transform: translateY(0); /* Позиція блоків після анімації */
+		transform: translateX(0); /* Позиція блоків після анімації */
 	}
 }
-.rev-img-block-4__animated {
+.img-card-two__animated {
 	opacity: 0; /* Блоки за замовчуванням не видимі */
-	transform: translatex(-400px); /* Початкове положення блоків нижче */
+	transform: translateX(400px); /* Початкове положення блоків нижче */
 	transition: opacity 0.5s ease, transform 5s ease;
 	&.animate {
 		opacity: 1; /* Зробіть блоки видимими при анімації */
-		transform: translateY(0); /* Позиція блоків після анімації */
+		transform: translateX(0); /* Позиція блоків після анімації */
 	}
 }

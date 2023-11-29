@@ -1,5 +1,7 @@
 .footer {
-	padding: 119px 0px 118px 0px;
+	@include adaptiveValue('padding-top', 119, 5);
+	@include adaptiveValue('padding-bottom', 118, 5);
+
 	background: #0e1d28;
 
 	// .footer__container
@@ -11,7 +13,11 @@
 
 	&__row {
 		display: flex;
-		justify-content: space-around;
+		flex-direction: column;
+		@media (min-width: $mobile) {
+			flex-direction: row;
+			justify-content: space-around;
+		}
 	}
 
 	// .footer__logo

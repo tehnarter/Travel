@@ -5,14 +5,16 @@ title: Travel
 <div class="wrapper">
 	@@include('blocks/header.html')
 	<main class="main">
-		<div class="benefits">
+		<div id="num-1" class="benefits">
 			<div class="benefits__container">
 				<div class="benefits__inner inner-containar">
 					<div class="benefits__title">Benefits of Odigo</div>
 					<div class="benefits__row">
 						<div class="benefits__card card">
 							<div class="card__icon">
-								<img src="img/sec_ben/Icon_1.png" alt="" />
+								<a href="#">
+									<img src="img/sec_ben/Icon_1.png" alt="" />
+								</a>
 							</div>
 							<div class="card__title">Welcome to Odigo!</div>
 							<div class="card__text">
@@ -53,7 +55,7 @@ title: Travel
 				</div>
 			</div>
 		</div>
-		<div class="get">
+		<div id="num-2" class="get">
 			<div class="get__container">
 				<div class="get__inner">
 					<div class="get__head">
@@ -62,19 +64,39 @@ title: Travel
 					</div>
 					<div class="get__galerry">
 						<div class="get__item_1">
-							<img src="img/sec_get/Image.jpg" alt="" />
+							<img
+								class="img-get-1__animated scroll-animated"
+								src="img/sec_get/Image.jpg"
+								alt=""
+							/>
 						</div>
 						<div class="get__item_2">
-							<img src="img/sec_get/2.jpg" alt="" />
+							<img
+								class="img-get-2__animated scroll-animated"
+								src="img/sec_get/2.jpg"
+								alt=""
+							/>
 						</div>
 						<div class="get__item_3">
-							<img src="img/sec_get/3.jpg" alt="" />
+							<img
+								class="img-get-3__animated scroll-animated"
+								src="img/sec_get/3.jpg"
+								alt=""
+							/>
 						</div>
 						<div class="get__item_4">
-							<img src="img/sec_get/4.jpg" alt="" />
+							<img
+								class="img-get-4__animated scroll-animated"
+								src="img/sec_get/4.jpg"
+								alt=""
+							/>
 						</div>
 						<div class="get__item_5">
-							<img src="img/sec_get/5.jpg" alt="" />
+							<img
+								class="img-get-5__animated scroll-animated"
+								src="img/sec_get/5.jpg"
+								alt=""
+							/>
 						</div>
 					</div>
 				</div>
@@ -85,7 +107,11 @@ title: Travel
 				<div class="focus__row">
 					<div class="focus__cards card-one__row">
 						<div class="card-one__img">
-							<img src="img/sec_focus/image_1.jpg" alt="" />
+							<img
+								class="img-card-one__animated scroll-animated"
+								src="img/sec_focus/image_1.jpg"
+								alt=""
+							/>
 						</div>
 						<div class="card-one__block block">
 							<div class="block__subtitle">Prefecture in Focus: Tottori</div>
@@ -104,7 +130,11 @@ title: Travel
 				<div class="focus__row">
 					<div class="focus__cards card-two__row">
 						<div class="card-two__img">
-							<img src="img/sec_focus/image_2.jpg" alt="" />
+							<img
+								class="img-card-two__animated scroll-animated"
+								src="img/sec_focus/image_2.jpg"
+								alt=""
+							/>
 						</div>
 						<div class="card-two__block block-two">
 							<div class="block-two__subtitle">
@@ -227,7 +257,7 @@ title: Travel
 				</div>
 			</div>
 		</div>
-		<div class="video">
+		<div id="num-3" class="video">
 			<div class="video__play">
 				<video id="myVideo" controls>
 					<source src="img/sec_video/Tokyo.mp4" type="video/mp4" />
@@ -236,5 +266,5 @@ title: Travel
 			</div>
 		</div>
 	</main>
-	@@include('blocks/footer.html')
+	@@include('blocks/footer.html') @@include('blocks/button-scroll.html')
 </div>

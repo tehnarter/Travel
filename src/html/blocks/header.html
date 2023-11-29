@@ -2,17 +2,19 @@
 	<div class="header__container inner-containar">
 		<div class="header__nav">
 			<div class="header__nav-row">
+				@@include('burger.html')
 				<a href="#" class="header__nav-logo">
 					<img src="img/Header/Logo.png" alt="" />
 				</a>
-				<div class="header__nav-nav">
-					<ul class="header__lists-row">
-						<li class="header__list"><a href="#">Articles</a></li>
-						<li class="header__list"><a href="#">Locations</a></li>
-						<li class="header__list"><a href="#">Videos</a></li>
-						<li class="header__list"><a href="#">Sign in</a></li>
-					</ul>
-				</div>
+				@@include('nav.html')
+				<img
+					width="25"
+					height="25"
+					id="mode-dark"
+					class="day-night day-mode"
+					src="../../img/day-night.png"
+					alt="day-night"
+				/>
 			</div>
 		</div>
 

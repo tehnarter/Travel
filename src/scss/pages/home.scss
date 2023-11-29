@@ -1,6 +1,7 @@
 //!  SECTION BENEFITS
 .inner-containar {
-	padding: 0px 100px 0px 100px;
+	@include adaptiveValue('padding-left', 100, 5);
+	@include adaptiveValue('padding-right', 100, 5);
 }
 .benefits {
 	margin: 0px 0px 131px 0px;
@@ -8,15 +9,18 @@
 	}
 	&__inner {
 		margin: -223px 0px 0px 0px;
-		background-color: #fff;
+		background-color: var(--bg-primary);
 	}
 	// .benefits__title
 
 	&__title {
-		padding: 93px 0px 120px 0px;
+		@include adaptiveValue('padding-top', 93, 5);
+		@include adaptiveValue('padding-bottom', 120, 5);
+
 		font-family: 'Lato';
 		font-style: normal;
 		font-weight: 500;
+		@include adaptiveValue('font-size', 35, 20);
 		font-size: 35px;
 		line-height: 42px;
 		/* identical to box height */
@@ -28,6 +32,8 @@
 
 	&__row {
 		display: flex;
+		flex-wrap: wrap;
+		row-gap: 15px;
 		margin: 0px -22.5px 0px -22.5px;
 	}
 
@@ -68,6 +74,7 @@
 		font-weight: 400;
 		font-size: 16px;
 		line-height: 24px;
+		max-width: 286px;
 		/* or 150% */
 
 		color: #000000;
@@ -109,6 +116,7 @@
 	&__head {
 		margin: 0px 0px 46px 0px;
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
 	}
 
@@ -118,7 +126,7 @@
 		font-family: 'Lato';
 		font-style: normal;
 		font-weight: 500;
-		font-size: 35px;
+		@include adaptiveValue('font-size', 35, 20);
 		line-height: 42px;
 		/* identical to box height */
 
@@ -159,33 +167,36 @@
 
 	&__galerry {
 		width: 100%;
-		display: grid;
-		grid-template-columns: repeat(6, 16.666%);
-
-		grid-template-rows: auto auto;
+		@media (min-width: $mobile) {
+			display: grid;
+			grid-template-columns: repeat(6, 16.666%);
+			grid-template-rows: auto auto;
+		}
 	}
 
 	// .get__item
 
 	img {
 		width: 100%;
+		height: 100%;
 	}
+	@media (min-width: $mobile) {
+		&__item_1 {
+			grid-column-start: span 3;
+		}
 
-	&__item_1 {
-		grid-column-start: span 3;
-	}
-
-	&__item_2 {
-		grid-column-start: span 3;
-	}
-	&__item_3 {
-		grid-column-start: span 2;
-	}
-	&__item_4 {
-		grid-column-start: span 2;
-	}
-	&__item_5 {
-		grid-column-start: span 2;
+		&__item_2 {
+			grid-column-start: span 3;
+		}
+		&__item_3 {
+			grid-column-start: span 2;
+		}
+		&__item_4 {
+			grid-column-start: span 2;
+		}
+		&__item_5 {
+			grid-column-start: span 2;
+		}
 	}
 }
 //! FOCUS
@@ -213,14 +224,21 @@
 	&__row {
 		margin: 0px 0px 77px 0px;
 		display: flex;
+		flex-direction: column;
+
+		@media (min-width: $tablet) {
+			flex-direction: row;
+		}
 	}
 }
 .card-one {
 	// .card__img
 
 	&__img {
-		padding: 0px 54px 0px 0px;
 		flex: 0 0 50%;
+		@media (min-width: $mobile) {
+			padding: 0px 54px 0px 0px;
+		}
 	}
 	&__img img {
 		width: 100%;
@@ -231,8 +249,12 @@
 	}
 }
 .block {
-	padding: 0px 0px 0px 54px;
+	@media (min-width: $mobile) {
+		padding: 0px 0px 0px 54px;
+	}
+
 	flex: 1 0 50%;
+
 	// .block__subtitle
 
 	&__subtitle {
@@ -253,6 +275,7 @@
 		font-weight: 400;
 		line-height: 24px;
 		color: #102746;
+		max-width: 531px;
 	}
 
 	// .block__button
@@ -282,15 +305,20 @@
 
 	&__row {
 		display: flex;
-		flex-direction: row-reverse;
+		flex-direction: column;
 		flex: 1 0 50%;
+		@media (min-width: $tablet) {
+			flex-direction: row-reverse;
+		}
 	}
 }
 .card-two {
 	// .card__img
 
 	&__img {
-		padding: 0px 0px 0px 54px;
+		@media (min-width: $mobile) {
+			padding: 0px 0px 0px 54px;
+		}
 	}
 	&__img img {
 		width: 100%;
@@ -302,7 +330,10 @@
 }
 
 .block-two {
-	padding: 0px 54px 0px 47px;
+	@media (min-width: $mobile) {
+		padding: 0px 54px 0px 47px;
+	}
+
 	flex: 1 0 50%;
 	// .block-two__subtitle
 
@@ -324,6 +355,7 @@
 		font-weight: 400;
 		line-height: 24px;
 		color: #102746;
+		max-width: 531px;
 	}
 
 	// .block-two__button
@@ -376,9 +408,15 @@
 	}
 }
 .card {
-	flex: 0 1 33.333%;
-
 	padding: 0px 26px 0px 26px;
+
+	flex: 0 1 100%;
+	@media (min-width: $mobile) {
+		flex: 0 1 50%;
+	}
+	@media (min-width: $tablet) {
+		flex: 0 1 33.333%;
+	}
 
 	// .card__img
 
@@ -411,7 +449,7 @@
 		font-size: 18px;
 		font-weight: 500;
 		line-height: 24px;
-		ccolor: $mainColor;
+		color: $mainColor;
 	}
 
 	// .card__like
@@ -493,7 +531,7 @@
 //! VIDEO
 
 .video {
-	margin: 144px 0px 0px 0px;
+	@include adaptiveValue('margin-top', 144, 58);
 
 	// .video__play
 
@@ -507,10 +545,10 @@
 
 	&__play > img {
 		position: absolute;
-		top: 50%;
+		top: 40%;
 		left: 50%;
-		width: 112px;
-		height: 112px;
+		width: 8%;
+		// height: 10%;
 		color: $mainColor;
 	}
 }
